@@ -1,0 +1,395 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  background: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover
+    text-decoration: none
+
+.container
+  position: relative
+  margin: 0 auto
+  width: 100%
+  max-width: 1170px
+  padding: 0 15px
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+
+
+.logo
+  width: 100%
+  max-width: 191px
+
+.color-accent
+  color: $accent
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  transition: .3s ease
+  border-radius: 10px
+  color: #fff
+  font-size: 24px
+  font-weight: bold
+  width: 100%
+  height: 67px
+
+.btn-accent
+  background-image: linear-gradient(to right, #36d098, #3aca96, #3ecd76), linear-gradient(to bottom, #282828, #282828)
+  &:hover
+    background-image: linear-gradient(to left, #36d098, #3aca96, #3ecd76), linear-gradient(to bottom, #282828, #282828)
+
+h2
+  text-align: center
+  width: 100%
+  font-size: 36px
+  font-weight: bold
+  color: #3c3c3c
+
+
+//footer
+footer
+  background: url("../img/bg-footer.png") no-repeat center
+    size: cover
+  color: #fff
+  padding: 96px 0 83px
+  .container
+    align-items: center
+    justify-content: space-between
+
+  .logo
+    max-width: 345px
+
+.description-company
+  font-weight: bold
+  font-size: 24px
+  max-width: 308px
+  width: 100%
+
+.list-social
+  display: flex
+  align-items: center
+  margin: 27px 0 0
+  li
+    margin: 0 14px 0 0
+    &:last-child
+      margin: 0
+
+.phone
+  color: #fff
+  font-weight: bold
+  font-size: 24px
+
+.footer-bottom
+  margin: 76px 0 0
+
+.copyright
+  font-size: 24px
+
+//header
+.address
+  font-size: 21px
+
+header
+  padding: 57px 0 0
+  color: #fff
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+  .container
+    justify-content: space-between
+    align-items: center
+  .phone
+    font-size: 21px
+  .list-social
+    margin: 18px 0 0
+  .description-company
+    font-size: 21px
+    max-width: 270px
+
+//main
+main
+  width: 100%
+  background: url("../img/bg-slider.png") no-repeat right center
+    size: cover
+  margin: 0 0 30px
+
+.main-home__slider
+  overflow: hidden
+  color: #fff
+  .container
+    align-items: center
+    justify-content: space-between
+
+
+.main-home__img
+  width: 632px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  padding: 121px 0 68px
+  img
+    position: relative
+    z-index: 1
+
+.circle
+  width: 797px
+  height: 797px
+  opacity: .05
+  border: solid 1px #fff
+    radius: 50%
+  position: absolute
+  left: 50%
+  top: 0
+  transform: translate(-50%,0)
+  &:before
+    content: ''
+    width: 555px
+    height: 555px
+    border: solid 1px #fff
+      radius: 50%
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    position: absolute
+  &:after
+    content: ''
+    width: 393px
+    height: 393px
+    border: solid 1px #fff
+      radius: 50%
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    position: absolute
+
+
+.main-home__content
+  max-width: 434px
+  .text
+    margin: 0 0 43px auto
+    max-width: 419px
+    font-size: 30px
+    font-weight: bold
+    text-align: right
+    line-height: 1
+
+.slick-slide
+  outline: none
+
+//advantages
+.advantages
+  padding: 15px 0 36px
+
+.advantages-wrapper
+  width: 100%
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-start
+  margin: 66px 0 0
+
+.advantages-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  max-width: 222px
+  width: 100%
+  margin: 0 0 30px
+  font-size: 18px
+
+strong
+  font-weight: bold
+
+.advantages-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  margin: 0 auto 13px
+
+//stages-work
+.stages-work
+  padding: 156px 0
+  color: #fff
+  background: url("../img/bg2.png") no-repeat center
+    size: cover
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 68px
+    top: -10px
+    background: url("../img/decor1.png") no-repeat center
+      size: contain
+    width: 1646px
+    height: 616px
+  h2
+    color: #fff
+    position: relative
+    z-index: 1
+
+.stages-work__wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 79px 0 0
+  position: relative
+  z-index: 1
+
+.stages-work__box
+  margin: 0 0 24px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  text-shadow: 0.5px 0.9px 35px rgba(44, 81, 87, 0.42)
+  font-size: 24px
+  font-weight: bold
+  max-width: 258px
+  width: 100%
+  &:first-child
+    img
+      margin: 0 40px 0 0
+  &:nth-child(2)
+    .stages-work__icon
+      &:before
+        background: url("../img/bg-stage2.png") no-repeat center
+          size: contain
+        height: 258px
+        width: 269px
+  &:nth-child(3)
+    .stages-work__icon
+      &:before
+        background: url("../img/bg-stage3.png") no-repeat center
+          size: contain
+        height: 217px
+        width: 305px
+  &:nth-child(4)
+    img
+      margin: 0 0 0 35px
+    .stages-work__icon
+      &:before
+        background: url("../img/bg-stage4.png") no-repeat center
+          size: contain
+        height: 265px
+        width: 211px
+
+.stages-work__icon
+  margin: 0 0 34px
+  width: 100%
+  height: 215px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    position: relative
+    z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%,0)
+    width: 100%
+    height: 100%
+    background: url("../img/bg-stage1.png") no-repeat center
+      size: contain
+
+
+@import "media"
+// Всегда в конце
