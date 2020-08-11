@@ -9,7 +9,15 @@ $('.variable-products__slider').slick({
     centerMode: true,
     variableWidth: true,
     arrows: false,
-    dots: true
+    dots: true,
+    responsive: [
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
 
 $('.portfolio-slider').slick({
@@ -21,7 +29,21 @@ $('.portfolio-slider').slick({
 $('.reviews-slider').slick({
     slidesToShow: 3,
     prevArrow: '<button type="button" class="slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"></button>'
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 580,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
 
 // модальные окна (несколько)
@@ -42,6 +64,15 @@ $(document).ready(function () {
                         opacity: 1,
                         top: '50%'
                     }, 200);
+
+                $('.slider-quiz').slick({
+                    slidesToShow: 1,
+                    prevArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt="" class="icon">Назад</button>',
+                    nextArrow: '<button type="button" class="slick-prev">Пропустить<img src="img/arrow-right.png" alt=""></button>',
+                    appendArrows: '.slider-quiz-nav',
+                    infinite: false,
+                    adaptiveHeight: true
+                });
             });
     });
 
@@ -59,3 +90,11 @@ $(document).ready(function () {
     });
 });
 //end
+
+$(".slider-quiz").on("afterChange", function (event) {
+    if ($(this).find('.slick-slide').last().hasClass('slick-active')) {
+        $('.slick-prev').hide();
+    } else {
+        $('.slick-prev').show();
+    }
+});
