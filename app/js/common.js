@@ -1,6 +1,7 @@
 $('.main-home__slider').slick({
     slidesToShow: 1,
-    arrows: false
+    arrows: false,
+    fade: true
 });
 
 $('.variable-products__slider').slick({
