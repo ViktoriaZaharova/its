@@ -78,7 +78,8 @@ body {
   background: #fff; }
 
 html, body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  height: 100%; }
 
 img {
   display: block;
@@ -1499,7 +1500,10 @@ button {
       height: 42px;
       font-size: 12px; }
     .form-quiz .form-group button.btn {
-      max-width: 138px; }
+      max-width: 138px;
+      margin: 20px auto 0; }
+  .form-quiz .form-group-result label:nth-child(3) {
+    margin-right: 0; }
 
 .slider-quiz-nav {
   width: 100%;
@@ -1665,7 +1669,8 @@ button {
   padding: 240px 0;
   position: relative;
   color: #fff;
-  background: transparent; }
+  background: transparent;
+  height: 100%; }
   .main:before {
     content: '';
     position: absolute;
