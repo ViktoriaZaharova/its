@@ -665,7 +665,9 @@ strong {
           flex-direction: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
 
 .variable-products__img {
   width: 200px;
@@ -725,7 +727,8 @@ strong {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   .slick-dots .slick-active {
     background: #29c9d3; }
   .slick-dots li {
@@ -734,7 +737,8 @@ strong {
     height: 12px;
     background-color: #d8d8d8;
     border-radius: 50%;
-    margin: 0 12px 0 0; }
+    margin: 0 12px 0 0;
+    display: block; }
     .slick-dots li:last-child {
       margin: 0; }
     .slick-dots li button {
