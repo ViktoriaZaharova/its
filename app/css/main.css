@@ -633,7 +633,8 @@ strong {
   .variable-products__slider .slide {
     padding: 75px 20px 35px;
     opacity: .7;
-    margin: 30px 0 0; }
+    margin: 30px 0 0;
+    height: 583px; }
   .variable-products__slider .slick-center {
     margin: 0 40px;
     opacity: 1; }
@@ -2286,6 +2287,8 @@ button {
     height: 210px; }
   .variable-products__slider .slick-center .variable-products__content {
     height: calc(100% - 170px); }
+  .variable-products__slider .slide {
+    height: auto; }
   .name-product {
     font-size: 24px;
     margin: 0 auto 10px; }
