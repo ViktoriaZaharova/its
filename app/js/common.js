@@ -65,14 +65,7 @@ $(document).ready(function () {
                         top: '50%'
                     }, 200);
 
-                $('.slider-quiz').slick({
-                    slidesToShow: 1,
-                    prevArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt="" class="icon">Назад</button>',
-                    nextArrow: '<button type="button" class="slick-prev">Пропустить<img src="img/arrow-right.png" alt=""></button>',
-                    appendArrows: '.slider-quiz-nav',
-                    infinite: false,
-                    adaptiveHeight: true
-                });
+               $('.slider-quiz').slick('setPosition'); //новая строка. слайдер опустила ниже
             });
     });
 
@@ -90,6 +83,16 @@ $(document).ready(function () {
     });
 });
 //end
+
+//слайдер из модального окна
+$('.slider-quiz').slick({
+    slidesToShow: 1,
+    prevArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt="" class="icon">Назад</button>',
+    nextArrow: '<button type="button" class="slick-prev">Пропустить<img src="img/arrow-right.png" alt=""></button>',
+    appendArrows: '.slider-quiz-nav',
+    infinite: false,
+    adaptiveHeight: true
+});
 
 $(".slider-quiz").on("afterChange", function (event) {
     if ($(this).find('.slick-slide').last().hasClass('slick-active')) {
